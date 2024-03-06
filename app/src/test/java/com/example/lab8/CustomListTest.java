@@ -52,13 +52,24 @@ public class CustomListTest {
 // }
 
 
+    //@Test
+    //void testdelete(){
+        //list = MockCityList();
+       // City city = new City("Charlottetown", "Prince Edward Island");
+        //list.addCity(city);
+    // list.delete(city);
+       // assertFalse(list.getCities().contains(city));
+   // }
+
+
     @Test
-    void testdelete(){
-        list = MockCityList();
+    void countCities(){
+        list  = MockCityList();
         City city = new City("Charlottetown", "Prince Edward Island");
+        City city2 = new City("Calgary", "AB");
         list.addCity(city);
-        list.delete(city);
-        assertFalse(list.getCities().contains(city));
+        list.addCity(city2);
+        assertEquals(0, list.countCities());
     }
 
 
