@@ -102,7 +102,8 @@ public class CustomList extends ArrayAdapter<City> {
         boolean remove = false;
         for (int i = 0; i < cities.size(); i++) {
             if (cities.get(i).equals(city)) {
-                remove = false;
+                cities.remove(i);
+                remove = true;
             }
         }
         if (!remove){
