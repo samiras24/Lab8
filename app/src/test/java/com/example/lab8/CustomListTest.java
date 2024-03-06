@@ -27,13 +27,13 @@ public class CustomListTest {
         return list;
     }
 
-   // @Test
-   // public void addCityTest(){
-      //  list = MockCityList();
-    //  int listSize = list.getCount();
-       // list.addCity(new City("Estevan", "SK"));
-       // assertEquals(list.getCount(),listSize + 1);
-   // }
+    @Test
+    public void addCityTest(){
+       list = MockCityList();
+       int listSize = list.getCount();
+       list.addCity(new City("Estevan", "SK"));
+       assertEquals(list.getCount(),listSize + 1);
+    }
 
     /**
      * get the size of the list
@@ -43,23 +43,23 @@ public class CustomListTest {
      */
 
 
-    // @Test
-    // void testhasCity(){
-    // list = MockCityList();
-    //  City city = new City("Charlottetown", "Prince Edward Island");
-    // list.addCity(city);
-    // assertTrue(list.hasCity(city));
-// }
+     @Test
+     void testhasCity(){
+     list = MockCityList();
+      City city = new City("Charlottetown", "Prince Edward Island");
+     list.addCity(city);
+     assertTrue(list.hasCity(city));
+ }
 
 
-    //@Test
-    //void testdelete(){
-        //list = MockCityList();
-       // City city = new City("Charlottetown", "Prince Edward Island");
-        //list.addCity(city);
-    // list.delete(city);
-       // assertFalse(list.getCities().contains(city));
-   // }
+    @Test
+    void testdelete(){
+        list = MockCityList();
+       City city = new City("Charlottetown", "Prince Edward Island");
+       list.addCity(city);
+       list.delete(city);
+       assertFalse(list.getCities().contains(city));
+    }
 
 
     @Test
