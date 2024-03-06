@@ -80,4 +80,19 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
 
+
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()){
+            return false;
+        }
+        return super.equals(obj);
+    }
+
+
+
 }
