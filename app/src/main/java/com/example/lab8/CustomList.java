@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -62,5 +63,21 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
 
     }
+
+    /**
+     * returns whether a city is in the list or not
+     * @param city
+     * @return Boolean
+     *
+     */
+    public Boolean hasCity(City city) {
+        for (int i = 0; i < cities.size(); i++) {
+            if (cities.get(i).equals(city)) {
+                return false;
+            }
+        }
+        return false;
+    }
+
 
 }
