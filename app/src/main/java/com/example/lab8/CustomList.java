@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class CustomList extends ArrayAdapter<City> {
@@ -47,6 +49,16 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     /**
+     * This returns a sorted list of cities
+     * @return list
+     * Return the sorted list
+     */
+    public List<City> getCities() {
+        List<City> list = cities;
+        return list;
+    }
+
+    /**
      * this gets size of the list
      * @return
      */
@@ -79,6 +91,24 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+
+    /**
+     * Removes a city from the list if it exists, otherwise throws an exception
+     * @param city
+     * @throws NoSuchElementException
+     *
+     */
+    public void delete(City city) {
+        boolean remove = false;
+        for (int i = 0; i < cities.size(); i++) {
+            if (cities.get(i).equals(city)) {
+                remove = false;
+            }
+        }
+        if (!remove){
+            throw new NoSuchElementException();
+        }
+    }
 
 
 
